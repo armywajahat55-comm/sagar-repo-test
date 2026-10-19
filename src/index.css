@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+/* Zero CLS: Stable scrollbar gutter, text size stabilization, and image layout stability */
+html {
+  scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Inter, Arial, sans-serif;
+  background-color: #f7f8f9;
+  color: #222222;
+  line-height: 1.65;
+  font-size: 16px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  font-synthesis: none;
+}
+
+#app-root {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* Ensure no element causes horizontal scroll on small devices */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Smartphone Mobile Frame - 100% full screenshot visible on all screens */
+.phone-mockup-frame {
+  max-width: 290px;
+  width: 100%;
+  margin: 0 auto;
+  background: #090d16;
+  border: 7px solid #1e293b;
+  border-radius: 36px;
+  box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  padding: 8px 6px 10px;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-sizing: border-box;
+}
+
+.phone-mockup-frame:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -6px rgba(2, 132, 199, 0.3), 0 0 0 1px rgba(56, 189, 248, 0.25) inset;
+}
+
+.phone-top-notch {
+  width: 76px;
+  height: 12px;
+  background: #000000;
+  border-radius: 10px;
+  margin: 0 auto 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.phone-top-speaker {
+  width: 24px;
+  height: 3px;
+  border-radius: 2px;
+  background: #334155;
+}
+
+.phone-top-camera {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #334155;
+}
+
+.phone-screen {
+  border-radius: 24px;
+  overflow: hidden;
+  background: #000000;
+  display: block;
+  width: 100%;
+  line-height: 0;
+}
+
+.phone-screen a {
+  display: block;
+  text-decoration: none !important;
+  line-height: 0;
+}
+
+.phone-screen img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  border: 0;
+  border-radius: 22px;
+  object-fit: contain;
+}
+
+.phone-home-indicator {
+  width: 76px;
+  height: 3.5px;
+  background: #334155;
+  border-radius: 4px;
+  margin: 8px auto 0;
+}
+
+@media (max-width: 640px) {
+  .phone-mockup-frame {
+    max-width: min(275px, 88vw);
+    border-width: 6px;
+    border-radius: 30px;
+    padding: 7px 5px 9px;
+  }
+  .phone-screen, .phone-screen img {
+    border-radius: 18px;
+  }
+}
+

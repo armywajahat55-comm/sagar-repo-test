@@ -1,0 +1,8 @@
+{
+  "name": "Sagar Club",
+  "description": "Official Sagar Club Game - India's premier online color prediction platform, Wingo games, daily salary agent rewards, and official Sagar Club APK download portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
